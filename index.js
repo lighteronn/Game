@@ -10,8 +10,7 @@ let userInput;
     $("#myModal").modal('hide');
     userInput = event.target.parentNode.value.value
     console.log(userInput)
-  });
- })
+  
   
 
      // stops modal from being shown
@@ -25,10 +24,10 @@ let userInput;
 
   
 
-let level = 3
-if(userInput == 3) {
+
+if(userInput) {
 document.querySelector('.card-container').innerHTML = '';
-for(let i =0; i < level; i++ ) {
+for(let i =0; i < userInput; i++ ) {
     let number = Math.floor(Math.random()*6+6);
     records.push(number)
     document.querySelector('.card-container').innerHTML += `<div class="card text-center flip-card" style="width: 15%; height:12rem;">
@@ -69,7 +68,15 @@ setTimeout(() => {
      
     }, 1000*records.length);
   
-  }  
+}
+
+
+});
+})
 
 
 
+let restart = confirm('Do you want to continue?') 
+    if(restart) {
+      location.reload();
+    }
