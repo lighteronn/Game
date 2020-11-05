@@ -7,17 +7,17 @@ $(document).ready(() => {
   $('.btn-level').on('click', event => {
     //Deactivate the modal
     $("#myModal").modal('hide');
-    //Get the user's level input 
-    let level = event.target.parentNode.value.value
-    console.log(level, " level");
+    //Get the user's  input 
+    let numberOfCards = event.target.parentNode.value.value
+    console.log(numberOfCards, " level");
   
   
 
-if(level) {
+if(numberOfCards) {
 //Create cards and record the numbers generated with records array
 let records = [];
 document.querySelector('.card-container').innerHTML = '';
-for(let i =0; i < level; i++ ) {
+for(let i =0; i < numberOfCards; i++ ) {
     let number = Math.floor(Math.random()*6+6);
     records.push(number)
     document.querySelector('.card-container').innerHTML += `<div class="card text-center flip-card" style="width: 15%; height:12rem;">
