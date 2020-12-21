@@ -1,2 +1,2 @@
 # Memorize
-In this game, the player selects number of cards and each card has a number. The player tries to memorize the numbers in the correct order.
+It is a simple memory game. At the beginning, cards are opened sequentially and player memorizes numbers given by cards. Then, cards are closed and player tries to enter correct numbers by order. If the answer is correct, player wins. 
